@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .container {
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 380px; /* Increased width to match second image */
+    }
+    
+    .header {
+      padding: 15px 20px;
+      border-bottom: 1px solid #eeeeee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .back-button {
+      color: #4080ff;
+      font-size: 24px;
+    }
+    
+    .upload-button {
+      color: #4080ff;
+      font-size: 24px;
+    }
+    
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333333;
+    }
+    
+    .map-container {
+      height: 300px; /* Increased height to match second image */
+      background-color: #f5f5f7;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .map-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .info-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+    
+    .main-category {
+      background-color: #c83a29; /* Korean red color */
+      color: white;
+      padding: 15px 20px;
+      font-size: 22px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .back-arrow {
+      font-size: 22px;
+    }
+    
+    .percentage {
+      font-weight: 600;
+    }
+    
+    .subcategory {
+      border-bottom: 1px solid #eeeeee;
+      padding: 15px 20px;
+    }
+    
+    .subcategory-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .subcategory-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333333;
+      display: flex;
+      align-items: center;
+    }
+    
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #8B1A1A;
+      margin-right: 10px;
+    }
+    
+    .subcategory-value {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333333;
+      display: flex;
+      align-items: center;
+    }
+    
+    .forward {
+      color: #bbbbbb;
+      margin-left: 10px;
+    }
+    
+    .region {
+      padding: 5px 20px 5px 44px;
+      color: #555555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .regions-container {
+      margin-bottom: 5px;
+    }
+    
+    .region-count {
+      padding: 0px 20px 5px 44px;
+      color: #555555;
+      font-size: 16px;
+    }
+    
+    .dots-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .dot-nav {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #cccccc;
+      margin: 0 5px;
+    }
+    
+    .dot-nav.active {
+      background-color: #666666;
+    }
+    
+    .home-indicator {
+      width: 35%;
+      height: 5px;
+      background-color: #dddddd;
+      border-radius: 3px;
+      margin: 5px auto 20px;
+    }
+    
+    .japanese-section {
+      border-bottom: 1px solid #eeeeee;
+      padding: 15px 20px;
+    }
+
+    /* Status bar styling to match second image */
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 15px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Added status bar to match second image -->
+    <div class="status-bar">
+      <div>10:20</div>
+      <div>5G</div>
+    </div>
+  
+    <div class="header">
+      <div class="back-button">〈</div>
+      <div class="title">Ancestry Composition</div>
+      <div class="upload-button">↑</div>
+    </div>
+    
+    <div class="map-container">
+      <img src="03_20_2025_X-Design.jpeg" alt="Ancestry Map" class="map-image">
+      <div class="info-button">i</div>
+    </div>
+    
+    <div class="main-category">
+      <div class="back-arrow">〈</div>
+      <div>East Asian</div>
+      <div class="percentage">47.0%</div>
+    </div>
+    
+    <div class="subcategory">
+      <div class="subcategory-header">
+        <div class="subcategory-name">
+          <div class="dot"></div>
+          Korean
+        </div>
+        <div class="subcategory-value">
+          45.5%
+          <div class="forward">〉</div>
+        </div>
+      </div>
+      <div class="regions-container">
+        <div class="region">
+          Seoul, South Korea
+        </div>
+        <div class="region">
+          North Korea
+        </div>
+        <div class="region-count">
+          + 3 regions
+        </div>
+      </div>
+    </div>
+    
+    <div class="japanese-section">
+      <div class="subcategory-header">
+        <div class="subcategory-name">
+          <div class="dot" style="background-color: #c83a29;"></div>
+          Japanese
+        </div>
+        <div class="subcategory-value">
+          1.5%
+          <div class="forward">〉</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dots-container">
+      <div class="dot-nav"></div>
+      <div class="dot-nav active"></div>
+      <div class="dot-nav"></div>
+    </div>
+    
+    <div class="home-indicator"></div>
+  </div>
+</body>
+</html>
